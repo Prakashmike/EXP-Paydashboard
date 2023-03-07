@@ -1,0 +1,67 @@
+com/globallogic/automation/pageobjects/objectFactory/DriverFactory.java
+ com.globallogic.automation.pageobjects.objectFactory.DriverFactory
+ com.globallogic.automation.pageobjects.objectFactory.DriverFactory$1
+com/globallogic/automation/pageobjects/pages/FirstTab/IPhoneFirstTabPage.java
+ com.globallogic.automation.pageobjects.pages.FirstTab.IPhoneFirstTabPage
+com/globallogic/automation/pageobjects/enums/DeviceType.java
+ com.globallogic.automation.pageobjects.enums.DeviceType
+com/globallogic/automation/pageobjects/pages/ThirdTab/IThirdTabPage.java
+ com.globallogic.automation.pageobjects.pages.ThirdTab.IThirdTabPage
+com/globallogic/automation/pageobjects/pages/FirstTab/AndroidFirstTabPage.java
+ com.globallogic.automation.pageobjects.pages.FirstTab.AndroidFirstTabPage
+com/globallogic/automation/pageobjects/STRINGID.java
+ com.globallogic.automation.pageobjects.STRINGID
+com/globallogic/automation/pageobjects/pages/ThirdTab/AndroidThirdTabPage.java
+ com.globallogic.automation.pageobjects.pages.ThirdTab.AndroidThirdTabPage
+com/globallogic/automation/pageobjects/pages/Navigations/AndroidNavigationPage.java
+ com.globallogic.automation.pageobjects.pages.Navigations.AndroidNavigationPage
+ com.globallogic.automation.pageobjects.pages.Navigations.AndroidNavigationPage$1
+com/globallogic/automation/pageobjects/pages/SecondTab/ISecondTabPage.java
+ com.globallogic.automation.pageobjects.pages.SecondTab.ISecondTabPage
+com/globallogic/automation/pageobjects/pages/Login/ILoginPage.java
+ com.globallogic.automation.pageobjects.pages.Login.ILoginPage
+com/globallogic/automation/pageobjects/pages/Login/IPhoneLoginPage.java
+ com.globallogic.automation.pageobjects.pages.Login.IPhoneLoginPage
+com/globallogic/automation/pageobjects/pages/Navigations/INavigationPage.java
+ com.globallogic.automation.pageobjects.pages.Navigations.INavigationPage
+com/globallogic/automation/pageobjects/pages/SecondTab/AndroidSecondTabPage.java
+ com.globallogic.automation.pageobjects.pages.SecondTab.AndroidSecondTabPage
+com/globallogic/automation/pageobjects/enums/Platform.java
+ com.globallogic.automation.pageobjects.enums.Platform
+com/globallogic/automation/pageobjects/pages/SecondTab/IPhoneSecondTabPage.java
+ com.globallogic.automation.pageobjects.pages.SecondTab.IPhoneSecondTabPage
+com/globallogic/automation/pageobjects/enums/Tabs.java
+ com.globallogic.automation.pageobjects.enums.Tabs
+com/globallogic/automation/pageobjects/pages/Navigations/IPhoneNavigationPage.java
+ com.globallogic.automation.pageobjects.pages.Navigations.IPhoneNavigationPage
+ com.globallogic.automation.pageobjects.pages.Navigations.IPhoneNavigationPage$1
+com/globallogic/automation/pageobjects/pages/FirstTab/IFirstTabPage.java
+ com.globallogic.automation.pageobjects.pages.FirstTab.IFirstTabPage
+com/globallogic/automation/pageobjects/utilities/AppiumUtility.java
+ com.globallogic.automation.pageobjects.utilities.AppiumUtility
+com/globallogic/automation/pageobjects/pages/Login/AndroidLoginPage.java
+ com.globallogic.automation.pageobjects.pages.Login.AndroidLoginPage
+com/globallogic/automation/pageobjects/pages/BasePage/BasePage.java
+ com.globallogic.automation.pageobjects.pages.BasePage.BasePage
+com/globallogic/automation/pageobjects/utilities/LoggerHelper.java
+ com.globallogic.automation.pageobjects.utilities.LoggerHelper
+com/globallogic/automation/pageobjects/utilities/ApplicationProperties.java
+ com.globallogic.automation.pageobjects.utilities.ApplicationProperties
+com/globallogic/automation/pageobjects/pages/BasePage/IBaseInterface.java
+ com.globallogic.automation.pageobjects.pages.BasePage.IBaseInterface
+com/globallogic/automation/pageobjects/pages/ThirdTab/IPhoneThirdTabPage.java
+ com.globallogic.automation.pageobjects.pages.ThirdTab.IPhoneThirdTabPage
+com/globallogic/automation/pageobjects/utilities/ScreenshotUtility.java
+ com.globallogic.automation.pageobjects.utilities.ScreenshotUtility
+com/globallogic/automation/pageobjects/pages/DemoPage/IDemo.java
+ com.globallogic.automation.pageobjects.pages.DemoPage.IDemo
+com/globallogic/automation/pageobjects/pages/Navigations/NavigationHandler.java
+ com.globallogic.automation.pageobjects.pages.Navigations.NavigationHandler
+ com.globallogic.automation.pageobjects.pages.Navigations.NavigationHandler$1
+com/globallogic/automation/pageobjects/Application.java
+ com.globallogic.automation.pageobjects.Application
+com/globallogic/automation/pageobjects/objectFactory/PageObjectFactory.java
+ com.globallogic.automation.pageobjects.objectFactory.PageObjectFactory
+ com.globallogic.automation.pageobjects.objectFactory.PageObjectFactory$1
+com/globallogic/automation/pageobjects/pages/DemoPage/AndriodDemoPage.java
+ com.globallogic.automation.pageobjects.pages.DemoPage.AndriodDemoPage

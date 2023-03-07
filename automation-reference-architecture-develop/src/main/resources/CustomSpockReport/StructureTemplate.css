@@ -1,0 +1,118 @@
+body {
+    font-family: effra;
+    white-space: normal;
+    color: #000000;
+}
+
+h1, h2 {
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 1.75em;
+}
+
+h2 {
+    font-size: 1.25em;
+}
+
+th, td {
+    border-right: 2px solid #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+    border-left: 2px solid #FFFFFF;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding-top: 6px;
+    padding-right: 10px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+}
+
+table {
+    border: 0px solid #FFFFFF;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    text-align: left;
+}
+
+.bottom {
+    margin-bottom: 15px;
+}
+
+table.top {
+    margin-top:5px;
+}
+
+table.topplus {
+    margin-top:10px;
+}
+
+th {
+    background-color: #33CCCC;
+}
+
+td {
+    background-color: #C2F0F0;
+}
+
+th.features {
+    background-color: #B3B3FF;
+}
+
+td.features {
+    background-color: #E6E6FF;
+}
+
+.warning {
+    background-color: #FFE066;
+}
+
+div.packagePASSED {
+    background-color: #39AC39;
+}
+
+th.PASSED {
+    background-color: #40BF40;
+}
+
+td.PASSED {
+    background-color: #C6ECC6;
+}
+
+div.packageFAILED {
+    Background-color: #E60000;
+}
+
+th.FAILED {
+    background-color: #FF0000;
+}
+
+td.FAILED {
+    background-color: #FFB3B3;
+}
+
+.italics {
+    font-style: italic;
+}
+
+.button {
+    border: 1px solid #000000;
+    background-color: #D9D9D9;
+    padding: 2px;
+}
+
+.cutText {
+    word-break: break-all;
+}
+
+.parameters {
+    background-color: #E6E6E6;
+}
+
+.forparameter {
+    background-color: #CCCCCC;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<a id="toTop"></a>
+
+<head>
+    <link rel="stylesheet" href="StructureTemplate.css">
+</head>
+
+<body>
+
+<%
+if ( noData != true ) {
+%>
+
+<!--SUMMARY STATS-->
+<hr>
+<h1>Summary of Automated Test(s) Executed on ${ getDate( startList[0] ) } by ${ executedBy }</h1>
+<hr>
+
+<div class="bottom">
+    <table>
+        <tr>
+            <th>Executed By</th>
+            <th>Environment</th>
+            <th>Total Test</th>
+            <th>Test Passed</th>
+            <th>Test Failed</th>
+            <th>Pass %</th>
+            <th>Total Time</th>
+        </tr>
+        <tr>
+            <td class="cutText">${ executedBy }</td>
+            <td>${ environment }</td>
+            <td>${ packageTracker.size() }</td>
+            <td>${ testPassCount }</td>
+            <td>${ testFailCount }</td>
+            <%
+            if ( jsonListSize != 0 ) {
+            %>
+            <td>${ ( testPassCount/packageTracker.size()*100 as double ).round() }</td>
+            <%
+            } else {
+            %>
+            <td>0</td>
+            <%
+            }
+            %>
+            <td>${ totalTime }</td>
+        </tr>
+    </table>
+</div>
+
+<!--FEATURES STATS-->
+<hr>
+<h1>Tests</h1>
+<hr>
+<div class="bottom">
+
+    <table>
+        <tr>
+            <th class="features" width="8%">Test ID</th>
+            <th class="features">Test Name</th>
+            <th class="features" width="8%">Status</th>
+        </tr>
+    </table>
+    <table>
+        <%
+        def checkPackage
+        for ( def pttidx = 0; pttidx < packageTracker.size(); pttidx++ ) {
+        def lastComponent = packageTracker[pttidx]
+        checkPackage = lastComponent.split(/(?=[A-Z])/).join(' ')
+        def skippedCount = 0
+        for ( def index = 0; index < jsonListSize; index++ ) {
+            if(packageTracker[pttidx].equals(packageList[index]) && gherkinList[index].size()==0){
+                skippedCount++
+            }
+        }
+        def totalCount = ptTracker[pttidx]
+        def failedCount = ptFailedList[pttidx]
+        def passedCount = totalCount - failedCount - skippedCount
+        %>
+        <tr>
+            <td class="cutText features" width="8%"><a style="text-decoration:none;" href="https://www.globallogic.com/${codebeamerIDList[pttidx]}" target="_blank">${ codebeamerIDList[pttidx] }</a></td>
+            <td class="cutText features"><a style="text-decoration:none;" href="#toPackage${ checkPackage }">${ checkPackage }</a></td>
+            <%
+            if ( ptTracker[pttidx] != 0 ) {
+            %>
+            <%
+            } else {
+            %>
+            <td class="features" width="6%">0</td>
+            <%
+            }
+            %>
+            <td class="${ ptStatusTracker[pttidx] }" width="8%">${ ptStatusTracker[pttidx] }</td>
+        </tr>
+        <%
+        }
+        %>
+    </table>
+</div>
+
+<!--TEST DETAILS-->
+<hr>
+<h1>Tests Details</h1>
+<hr>
+<div class="bottom">
+    <%
+    for ( pttidx = 0; pttidx < packageTracker.size(); pttidx++ ) {
+    checkPackage = packageTracker[pttidx]
+    def lastComponent = checkPackage
+    def testName = lastComponent.split(/(?=[A-Z])/).join(' ')
+    %>
+    <h2 id="toPackage${ testName }">Test Name: ${ testName }</h2>
+    <h2>Test ID: ${ codebeamerIDList[pttidx] }</h2>
+    <%
+    for ( idx = 0; idx < jsonListSize; idx++ ) {
+    if ( checkPackage.equals( packageList[idx] )) {
+    %>
+    <table>
+        <tr>
+            <th class="${ resultList[idx] }" id="toNAME${ nameList[idx] }">Scenario: ${ scenarioList[idx] }</th>
+        </tr>
+    </table>
+    <div class="bottom">
+        <%
+        def parameterList = []
+        def parameterCounter = 0
+        gherkinList[idx].each{ gherkin ->
+        def needItalics = ""
+        if ( gherkin.contains( "Caught " )) {
+        needItalics = "italics"
+        }
+        %>
+        <table>
+            <tr>
+                <td class="${ needItalics } ${ isGherkinStepPassed( gherkin ) }">${ gherkin }</td>
+            </tr>
+        </table>
+        <%
+        }
+        %>
+    </div>
+    <%
+    }
+    }
+    }
+    %>
+</div>
+
+
+<%
+} else {
+%>
+<h2>NO DATA FOUND!</h2>
+<h2>PLEASE CHECK IF THE TEST HAS THE CORRECT PARAMETERS!</h2>
+<%
+}
+%>
+
+<hr>
+</body>
+
+<a class="button" style="text-decoration:none;" href="#toTop">TOP</a>
+</html>

@@ -1,0 +1,80 @@
+plugins {
+    id 'groovy'
+    id 'java'
+}
+
+group 'com.globallogic.automation'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+String fileSeparator = System.getProperty("file.separator")
+ext.reportDir = file("$buildDir" + fileSeparator + "spock-reports")
+ext.SpockReportDir = file("$buildDir" + fileSeparator + "resources" + fileSeparator +"test" + fileSeparator + "SpockReport")
+ext.screenshotDir = file("." + fileSeparator + "ExecutionData")
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.11'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    // Appium
+    compile "io.appium:java-client:6.1.0"
+
+    //Spock framework
+    compile "org.spockframework:spock-core:1.0-groovy-2.4"
+
+    //For reports
+    compile 'com.athaydes:spock-reports:1.3.1'
+    compile 'org.slf4j:slf4j-api:1.7.13'
+    compile 'org.slf4j:slf4j-simple:1.7.13'
+
+    //For logging
+    compile group: 'log4j', name: 'log4j', version: '1.2.16'
+}
+
+test {
+    systemProperty 'platform', System.getProperty('platform')
+    systemProperty 'deviceType', System.getProperty('deviceType')
+    setIgnoreFailures(true)
+    doFirst {
+        delete reportDir
+        delete SpockReportDir
+        delete screenshotDir
+        filter {
+            setIncludePatterns("com.globallogic.tests.*")
+        }
+    }
+
+    doLast {
+        println 'doLast: summaryReport!'
+        summaryReport.exec()
+    }
+}
+
+task testwithIDs(type: Test, description: 'Filtered tests') {
+    systemProperty 'platform', System.getProperty('platform')
+    systemProperty 'deviceType', System.getProperty('deviceType')
+    systemProperty 'testIDs', System.getProperty('testIDs')
+    setIgnoreFailures(true)
+
+    doFirst {
+        delete reportDir
+        delete SpockReportDir
+        delete screenshotDir
+        filter {
+            setIncludePatterns("com.globallogic.tests.*")
+        }
+    }
+    doLast {
+        println 'doLast: summaryReport!'
+        summaryReport.exec()
+    }
+}
+
+task summaryReport(dependsOn: 'classes', type: JavaExec) {
+    main = 'ReportProcessingTool.ReportGenerator'
+    classpath = sourceSets.main.runtimeClasspath
+}

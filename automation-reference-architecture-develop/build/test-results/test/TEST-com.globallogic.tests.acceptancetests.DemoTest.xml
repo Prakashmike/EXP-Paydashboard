@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.globallogic.tests.acceptancetests.DemoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-03T07:27:44" hostname="CHN1-LHP-N81714" time="14.119">
+  <properties/>
+  <testcase name="Ability to click Demo" classname="com.globallogic.tests.acceptancetests.DemoTest" time="14.119"/>
+  <system-out><![CDATA[2023-03-03 12:03:928 INFO  VersionTracesExtension :? - Spec = DemoTest, excluded = false
+2023-03-03 12:03:945 INFO  VersionTracesExtension :? - visitSpec = DemoTest
+2023-03-03 12:03:965 INFO  BaseSpecification :? - Setting up the spec class
+Searching for spock-report.json starting in this path: D:\Automation\automation-reference-architecture-develop\automation-reference-architecture-develop 
+SPOCK JSON File path: D:\Automation\automation-reference-architecture-develop\automation-reference-architecture-develop\build\resources\test\SpockReport\spock-report.json
+CUSTOM SPOCK JSON path: D:\Automation\automation-reference-architecture-develop\automation-reference-architecture-develop\build\resources\test\SpockReport\Custom-spock-report.json
+Number of lines of data read in Spock Json: 0
+CUSTOM SPOCK REPORT: D:\Automation\automation-reference-architecture-develop\automation-reference-architecture-develop\build\resources\test\SpockReport\CustomSpockSummary-03-03-2023_12_57_42.html
+2023-03-03 12:03:120 INFO  AppiumUtility :42 - Start Appium called...
+2023-03-03 12:03:78 INFO  VersionTracesRunListener :? - Starting test = Click the Tab and Verify
+2023-03-03 12:03:85 INFO  BaseSpecification :? - Setting up test environment
+2023-03-03 12:03:176 INFO  DriverFactory :63 - Driver creation for platform:Android
+2023-03-03 12:03:659 DEBUG ScreenshotUtility :135 - startScreenRecording
+2023-03-03 12:03:330 INFO  AndriodDemoPage :38 - Creating Device Driver...
+2023-03-03 12:03:331 INFO  AndriodDemoPage :40 - Device Driver Created Successfully...
+2023-03-03 12:03:331 DEBUG AndriodDemoPage :54 - findElement( By.xpath: //android.widget.TextView[@content-desc="Access'ibility"] )
+2023-03-03 12:03:332 INFO  AndriodDemoPage :56 - Waiting for element to be visible...
+2023-03-03 12:03:145 DEBUG AndriodDemoPage :54 - findElement( By.xpath: //android.widget.TextView[@content-desc="Access'ibility"] )
+2023-03-03 12:03:146 INFO  AndriodDemoPage :56 - Waiting for element to be visible...
+2023-03-03 12:03:442 INFO  AndriodDemoPage :17 - Accessability option was clicked successfully
+2023-03-03 12:03:442 DEBUG AndriodDemoPage :54 - findElement( By.xpath: //android.widget.TextView[@content-desc="Accessibility Node Provider"] )
+2023-03-03 12:03:443 INFO  AndriodDemoPage :56 - Waiting for element to be visible...
+2023-03-03 12:03:522 DEBUG AndriodDemoPage :54 - findElement( By.xpath: //android.widget.TextView[@content-desc="Accessibility Node Provider"] )
+2023-03-03 12:03:522 INFO  AndriodDemoPage :56 - Waiting for element to be visible...
+2023-03-03 12:03:415 INFO  AndriodDemoPage :21 - Accessability Node option was clicked successfully
+2023-03-03 12:03:421 INFO  BaseSpecification :? - Performed clean up
+2023-03-03 12:03:561 INFO  VersionTracesRunListener :? - Completed test = Click the Tab and Verify
+2023-03-03 12:03:567 DEBUG ScreenshotUtility :158 - stopScreenRecording ( folderName: 4, fileName: click_the_tab_and_verify )
+2023-03-03 12:03:200 INFO  BaseSpecification :? - Performed cleanup after execution completed for the spec class
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO com.athaydes.spockframework.report.internal.ConfigLoader - SpockReports config loaded: {com.athaydes.spockframework.report.showCodeBlocks=false, com.athaydes.spockframework.report.template.TemplateReportCreator.reportFileExtension=md, com.athaydes.spockframework.report.testSourceRoots=src/test/groovy, com.athaydes.spockframework.report.IReportCreator=com.athaydes.spockframework.report.internal.HtmlReportCreator, com.athaydes.spockframework.report.outputDir=build/spock-reports, com.athaydes.spockframework.report.internal.HtmlReportCreator.inlineCss=true, com.athaydes.spockframework.report.internal.HtmlReportCreator.featureReportCss=spock-feature-report.css, com.athaydes.spockframework.report.hideEmptyBlocks=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.summaryReportCss=spock-summary-report.css, com.athaydes.spockframework.report.projectVersion=Unknown, com.athaydes.spockframework.report.template.TemplateReportCreator.specTemplateFile=/templateReportCreator/spec-template.md, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryTemplateFile=/templateReportCreator/summary-template.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.excludeToc=false, com.athaydes.spockframework.report.template.TemplateReportCreator.enabled=true, com.athaydes.spockframework.report.projectName=, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryFileName=summary.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.printThrowableStackTrace=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.enabled=true}
+Mar 03, 2023 12:57:51 PM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
